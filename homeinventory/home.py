@@ -7,7 +7,7 @@ from PIL import ImageTk,Image
 from functools import partial
 import mysql.connector
 #create table his(item varchar(70) primary key,location varchar(100),mark integer(1),serialno varchar(30),price varchar(10),dat varchar(9),place varchar(70), note varchar(300),photoloc varchar(200) );
-mydb=mysql.connector.connect(host="localhost",user="****",password="****",database="php")
+mydb=mysql.connector.connect(host="localhost",user="root",password="****",database="php")
 cur=mydb.cursor()
 x=[]
 ran=0
@@ -221,7 +221,7 @@ i=0
 for j in range(0,4):
     for k in range(7):
         if alpha[i]!=".":
-            btn.append(Button(searchf,width=4,text=alpha[i],command=partial(bo,i),bg="light blue"))
+            btn.append(Button(searchf,width=4,text=alpha[i],command=partial(bo,i),bg="light green"))
             btn[i].grid(row=j,column=k)
             i+=1
         else:
